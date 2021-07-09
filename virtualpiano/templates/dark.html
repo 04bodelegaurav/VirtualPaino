@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<style>
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 100%;
+  font-weight: 800;
+}
+
+body{
+  background: black;
+  font-family: Arial;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+    </style>
+    <style>
+    @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+.party {
+  font-size: calc(20px + 20vh);
+  line-height: calc(5px + 5vh);
+/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+    </style>
+
+	<style>
+	div {
+  text-align: center;
+}
+
+#matrix {
+  border: 5px solid red;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+#matrix tr, td {
+  padding: 5px; 
+}
+
+#matrix button {
+  height: 200px;
+  width: 70px;
+  border: none;
+  
+  font-family: helvetica;
+  font-weight: bold;
+}
+
+#b1 {
+  background-color: #FFFF00;
+}
+
+#b1:hover {
+  background-color: #FD1C03;
+}
+
+#b2 {
+	background-color:#00FFFF;
+}
+
+#b2:hover {
+  background-color: #0033FF;
+}
+
+	</style>
+
+   <style>
+    .button {
+  font: bold 18px Arial;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 12px 16px 12px 16px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+    </style>
+		<title>Virtual Piano | Dark</title>
+		<script>
+			function playCs() {
+				var audio = new Audio("../static/C_s.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playDs() {
+				var audio = new Audio("../static/D_s.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playFs() {
+				var audio = new Audio("../static/F_s.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playGs() {
+				var audio = new Audio("../static/G_s.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playBb() {
+				var audio = new Audio("../static/Bb.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playCs1() {
+				var audio = new Audio("../static/C_s1.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playDs1() {
+				var audio = new Audio("../static/D_s1.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playC() {
+				var audio = new Audio("../static/C.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playD() {
+				var audio = new Audio("../static/D.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playE() {
+				var audio = new Audio("../static/E.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playF() {
+				var audio = new Audio("../static/F.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playG() {
+				var audio = new Audio("../static/G.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playA() {
+				var audio = new Audio("../static/A.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playB() {
+				var audio = new Audio("../static/B.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playC1() {
+				var audio = new Audio("../static/C1.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playD1() {
+				var audio = new Audio("../static/D1.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playE1() {
+				var audio = new Audio("../static/E1.wav");
+				audio.play();
+			}
+		</script>
+        <script>
+			function playF1() {
+				var audio = new Audio("../static/F1.wav");
+				audio.play();
+			}
+		</script>
+	</head>
+	<body>
+
+	<h1 class="party">Virtual Piano</h1>
+
+<div>
+  <table id="matrix">
+    <tr>
+	<td><button style="background-color:black;"></button></td>
+	<td><button style="background-color:black;"></button></td>
+      <td><button id="b1" onclick="playCs();">C#</button></td>
+      <td><button id="b1" onclick="playDs();">D#</button></td>
+	  <td><button id="b1" onclick="playFs();">F#</button></td>
+	  <td><button id="b1" onclick="playGs();">G#</button></td>
+	  <td><button id="b1" onclick="playBb();">Bb</button></td>
+	  <td><button id="b1" onclick="playCs1();">C#1</button></td>
+	  <td><button id="b1" onclick="playDs1();">D#1</button></td>
+	  <td><button style="background-color:black;"></button></td>
+	  <td><button style="background-color:black;"></button></td>
+    </tr>
+  
+    <tr>
+      <td><button id="b2" onclick="playC();" style="border:3px solid black">C</button></td>
+	  <td><button id="b2" onclick="playD();" style="border:3px solid black">D</button></td>
+	  <td><button id="b2" onclick="playE();" style="border:3px solid black">E</button></td>
+	  <td><button id="b2" onclick="playF();" style="border:3px solid black">F</button></td>
+	  <td><button id="b2" onclick="playG();" style="border:3px solid black">G</button></td>
+	  <td><button id="b2" onclick="playA();" style="border:3px solid black">A</button></td>
+	  <td><button id="b2" onclick="playB();" style="border:3px solid black">B</button></td>
+	  <td><button id="b2" onclick="playC1();" style="border:3px solid black">C1</button></td>
+	  <td><button id="b2" onclick="playD1();" style="border:3px solid black">D1</button></td>
+	  <td><button id="b2" onclick="playE1();" style="border:3px solid black">E1</button></td>
+	  <td><button id="b2" onclick="playF1();" style="border:3px solid black">F1</button></td>
+    </tr>
+  </table>
+</div>
+
+<a role="button" href="/" class="button">Light Mode</a>
+	</body>
+</html>
